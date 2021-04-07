@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+
+:root {
+  --accent: #f6ae2d;
+  --dark: #2f4858;
+  --light: #ebf5ee;
+
+  --border: 5px solid var(--accent);
+}
+
+body {
+  font-family: 'Londrina Solid', sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: var(--light);
+  background-color: var(--dark);
+  display: grid;
+  grid: auto / 1fr minmax(250px, 500px) 1fr;
+  text-align: center;
+}
+
+h1,
+div {
+  grid-column: 2 / 3;
+}
+
+p {
+  margin: 0;
+}
+
+div {
+  height: 80vh;
+  margin: 10vh 0;
+  border: var(--border);
+}
+
+.title {
+  grid-column: 1 / 2;
+  writing-mode: vertical-lr;
+  margin: 0 0.5em 0 auto;
+  padding-left: 1em;
+  color: var(--accent);
+  opacity: 0.35;
+}
+
+/* ======================= 
+      centering stuff
+   ======================= */
+
+.table {
+  display: table;
+}
+
+.table p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.absolute {
+  position: relative;
+}
+
+.absolute p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+}
+
+.margins {
+  display: grid;
+}
+
+.margins p {
+  margin: auto;
+}
